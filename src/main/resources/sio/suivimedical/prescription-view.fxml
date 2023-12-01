@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.suivimedical.PrescriptionController">
+   <children>
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="676.0" style="-fx-background-color: purple;" text="Préscription" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="68.0" text="Numéro de la consultation" />
+      <Label layoutX="318.0" layoutY="68.0" text="Date de la consultation" />
+      <TableView fx:id="tvMedicamentsPrescrits" layoutX="27.0" layoutY="179.0" prefHeight="173.0" prefWidth="617.0">
+         <columns>
+            <TableColumn fx:id="tcNumeroMedicament" prefWidth="76.0" text="Numéro" />
+            <TableColumn fx:id="tcNomMedicament" prefWidth="291.9999694824219" text="Nom" />
+            <TableColumn fx:id="tcPrixMedicament" prefWidth="109.3333740234375" text="Prix" />
+            <TableColumn fx:id="tcQuantiteMedicament" prefWidth="120.0" text="Quantité" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnInsererPrescription" layoutX="27.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnInsererPrescriptionClicked" prefHeight="25.0" prefWidth="617.0" text="Insérer" />
+      <TextField fx:id="txtNumeroConsultation" alignment="CENTER" disable="true" layoutX="188.0" layoutY="64.0" prefHeight="25.0" prefWidth="72.0" />
+      <DatePicker fx:id="dpDateConsultation" layoutX="471.0" layoutY="64.0" />
+      <Label layoutX="27.0" layoutY="111.0" text="Nom du patient" />
+      <Label layoutX="318.0" layoutY="111.0" text="Nom du médecin" />
+      <ComboBox fx:id="cboPatients" layoutX="126.0" layoutY="107.0" prefHeight="25.0" prefWidth="175.0" />
+      <ComboBox fx:id="cboMedecins" layoutX="470.0" layoutY="107.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="27.0" layoutY="151.0" text="Liste des médicaments" />
+   </children>
+</AnchorPane>

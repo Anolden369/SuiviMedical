@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="536.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.suivimedical.ConsultationController">
+   <children>
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: purple;" text="Consultation" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="57.0" text="Liste des consultations" />
+      <Label layoutX="20.0" layoutY="332.0" text="Liste des médicaments prescrits" />
+      <TableView fx:id="tvConsultations" layoutX="20.0" layoutY="82.0" onMouseClicked="#tvConsultationsClicked" prefHeight="235.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="tcNumeroConsultation" prefWidth="75.0" text="Numéro" />
+          <TableColumn fx:id="tcDateConsultation" prefWidth="82.66665649414062" text="Date" />
+            <TableColumn fx:id="tcNomPatient" prefWidth="150.66668701171875" text="Patient" />
+            <TableColumn fx:id="tcNomMedecin" prefWidth="126.66668701171875" text="Médecin" />
+            <TableColumn fx:id="tcMontantConsultation" minWidth="3.99993896484375" prefWidth="106.0" text="Montant" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvMedicamentsPrescrits" layoutX="20.0" layoutY="362.0" prefHeight="120.0" prefWidth="565.0">
+        <columns>
+          <TableColumn fx:id="tcNumeroMedicament" prefWidth="92.66665649414062" text="Numéro" />
+          <TableColumn fx:id="tcNomMedicament" prefWidth="266.0" text="Nom" />
+            <TableColumn fx:id="tcPrixMedicament" prefWidth="187.33331298828125" text="Prix" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
